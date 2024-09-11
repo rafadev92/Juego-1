@@ -1,6 +1,132 @@
-button{
-    background-color: blue;
-    color: azure;
-    text-decoration: solid;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+/* Reset básico */
+h1, ul, li {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilo del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4695e4; /* Azul oscuro */
+    color: #ffffff;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+/* Estilo del menú de navegación */
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo del slider */
+.slider {
+    position: relative;
+    max-width: 70%;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Botones de navegación */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo de las tarjetas */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px; /* Ajusta según sea necesario */
+    margin: 0 auto;
+}
+
+.card {
+    display: block; /* Asegura que el enlace ocupe el espacio completo */
+    text-decoration: none;
+    color: inherit; /* Hereda el color del texto del contenedor */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-text {
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+.foot{
+    text-align: center;
+    background-color: rgb(230, 230, 230);
 }
